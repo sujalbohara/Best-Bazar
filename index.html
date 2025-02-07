@@ -4,14 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Bazar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-width: 1200px;
+            background: white;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            align-items: center;
+            gap: 20px;
+        }
+        .text-section {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .contact {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .photo {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+        .btn {
+            display: block;
+            margin: 15px 0;
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+            .text-section {
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        <a href="https://maps.app.goo.gl/2pispxamQHfYed5o7"
-           target="_blank" 
-           style="text-decoration: none; color: inherit;">
-            Best Bazar, Jamner
-        </a>
-    </h1>
+
+    <div class="container">
+        <div class="text-section">
+            <h1>
+                <a href="https://maps.app.goo.gl/2pispxamQHfYed5o7" target="_blank">
+                    Best Bazar, Jamner
+                </a>
+            </h1>
+            
+            <p class="contact"><b>📞 Number:</b> 8208119169</p>
+            <p class="contact"><b>📧 Email:</b> babuji32891@gmail.com</p>
+
+            <button class="btn" onclick="window.open('https://maps.app.goo.gl/2pispxamQHfYed5o7', '_blank')">
+                📍 View Location
+            </button>
+
+            <button class="btn" onclick="openContactForm()">
+                📩 Contact Us
+            </button>
+        </div>
+
+        <div class="image-section">
+            <img src="image.png" alt="Best Bazar Mart" class="photo">
+        </div>
+    </div>
+
+    <script>
+        function openContactForm() {
+            let name = prompt("Enter Your Name:");
+            if (!name) return;
+
+            let phone = prompt("Enter Your Phone Number:");
+            if (!phone) return;
+
+            let email = "babuji32891@gmail.com";
+            let subject = "Customer Inquiry from Best Bazar";
+            let body = `Name: ${name}%0D%0APhone: ${phone}%0D%0A%0D%0APlease contact me regarding your products.`; 
+
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        }
+    </script>
+
 </body>
 </html>

@@ -134,7 +134,11 @@
             margin-top: 5px;
             color: #333;
         }
-        @media (max-width: 768px) {
+
+        .logo{
+            padding: 12px; font-size: 54px;
+        }
+        @media (max-width: 900px) {
             .top-section {
                 flex-direction: column;
                 text-align: center;
@@ -145,6 +149,10 @@
             .team {
                 flex-direction: column;
                 align-items: center;
+            }
+            .logo{
+                padding: 8px;
+                font-size: 34px;
             }
         }
     </style>
@@ -159,10 +167,10 @@
 
                     <h1 style="margin-bottom: 14px;">
                         <a href="https://maps.app.goo.gl/2pispxamQHfYed5o7" target="_blank">
-                            <span style="background-color: #28a745; color: #0056b3; padding: 12px; font-size: 54px;">
+                            <span class="logo" style="background-color: #28a745; color: #0056b3;">
                                 बेस्ट
                             </span>
-                            <span style="background-color:#0056b3; color: #28a745; padding: 12px; font-size: 54px;">
+                            <span class="logo" style="background-color:#0056b3; color: #28a745;">
                                 बजार 👌
                             </span>
                         </a>

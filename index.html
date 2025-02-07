@@ -16,24 +16,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             padding: 20px;
         }
         .container {
             display: flex;
+            flex-direction: column;
             width: 100%;
-            height: 100%;
             max-width: 1200px;
             background: white;
             padding: 30px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+        }
+        .top-section {
+            display: flex;
             align-items: center;
             gap: 20px;
         }
         .text-section {
             flex: 1;
-            padding-right: 20px;
         }
         .image-section {
             flex: 1;
@@ -42,15 +43,20 @@
             align-items: center;
         }
         h1 {
-            margin-bottom: 20px;
             color: #333;
         }
         a {
             text-decoration: none;
             color: #007BFF;
         }
+        .tagline {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
         .contact {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 10px;
         }
         .photo {
@@ -60,7 +66,7 @@
         }
         .btn {
             display: block;
-            margin: 15px 0;
+            margin: 10px 0;
             padding: 15px;
             font-size: 18px;
             color: white;
@@ -75,14 +81,70 @@
         .btn:hover {
             background-color: #0056b3;
         }
+        .founders-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .team-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .team-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .team-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            text-align: center;
+            width: 200px;
+            padding: 15px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007BFF;
+        }
+        .team-member h2 {
+            font-size: 18px;
+            color: #007BFF;
+            margin-top: 10px;
+        }
+        .team-member p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 5px;
+            color: #333;
+        }
         @media (max-width: 768px) {
-            .container {
+            .top-section {
                 flex-direction: column;
-                height: auto;
+                text-align: center;
             }
             .text-section {
                 padding-right: 0;
-                text-align: center;
+            }
+            .team {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -90,28 +152,73 @@
 <body>
 
     <div class="container">
-        <div class="text-section">
-            <h1>
-                <a href="https://maps.app.goo.gl/2pispxamQHfYed5o7" target="_blank">
-                    Best Bazar, Jamner
-                </a>
-            </h1>
-            
-            <p class="contact"><b>📞 Number:</b> 8208119169</p>
-            <p class="contact"><b>📧 Email:</b> babuji32891@gmail.com</p>
+        
+        <div class="top-section">
+            <div class="text-section">
+                <h1>
+                    <a href="https://maps.app.goo.gl/2pispxamQHfYed5o7" target="_blank">
+                        Best Bazar, Jamner
+                    </a>
+                </h1>
+                
+                <p class="tagline">बजट भी... बचत भी...</p>
 
-            <button class="btn" onclick="window.open('https://maps.app.goo.gl/2pispxamQHfYed5o7', '_blank')">
-                📍 View Location
-            </button>
+                <p class="contact"><b>📞 Number:</b> 8208119169</p>
+                <p class="contact"><b>📧 Email:</b> babuji32891@gmail.com</p>
 
-            <button class="btn" onclick="openContactForm()">
-                📩 Contact Us
-            </button>
+                <button class="btn" onclick="window.open('https://maps.app.goo.gl/2pispxamQHfYed5o7', '_blank')">
+                    📍 View Location
+                </button>
+
+                <button class="btn" onclick="openContactForm()">
+                    📩 Contact Us
+                </button>
+            </div>
+
+            <div class="image-section">
+                <img src="image.png" alt="Best Bazar Mart" class="photo">
+            </div>
         </div>
 
-        <div class="image-section">
-            <img src="image.png" alt="Best Bazar Mart" class="photo">
+        <!-- Founders & Managing Directors -->
+        <div class="founders-section">
+
+            <div class="team-container">
+
+                <!-- Founder Section -->
+                <div class="team-box">
+                    <h2 class="team-title">Founder</h2>
+                    <div class="team">
+                        <div class="team-member">
+                            <img src="babuji.jpg" alt="Founder">
+                            <h2>Founder</h2>
+                            <p>Mr. Subhashchand Bohara</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Managing Directors Section -->
+                <div class="team-box">
+                    <h2 class="team-title">Managing Directors</h2>
+                    <div class="team">
+                        <div class="team-member">
+                            <img src="badepapa.jpg" alt="Managing Director">
+                            <h2>Managing Director</h2>
+                            <p>Mr. Rahul Bohara</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="papa.jpg" alt="Managing Director">
+                            <h2>Managing Director</h2>
+                            <p>Mr. Naresh Bohara</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+
     </div>
 
     <script>
